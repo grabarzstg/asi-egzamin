@@ -1,0 +1,19 @@
+<div id="main-container" class="container">
+<div class="row">
+<% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+<% end -%>
+</div>
+<div class="row">
+  <strong>Title:</strong>
+  <%= @article.title %>
+</div>
+
+<div class="row">
+  <%= @article.text %>
+</div> 
+<div class="row">
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning' %> 
+<%= link_to 'Back', articles_path, class: 'btn btn-default' %>
+</div>
+</div>

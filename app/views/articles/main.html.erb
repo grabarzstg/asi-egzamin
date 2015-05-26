@@ -1,0 +1,14 @@
+<div class="container">
+<% @articles.each do |article| %>
+	<div class="media-body">
+	<h4 class="media-heading">
+      <%= article.title %> </br>
+	  <p><small> <span class="glyphicon glyphicon-time"> </span> Dodano:  <%= article.created_at %> </small></p>
+	</h4>
+	  <div class="well">
+        <%= article.text %>
+	  </div>
+	</div>
+<hr>
+<% end %>
+</div>

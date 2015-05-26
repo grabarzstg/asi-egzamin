@@ -1,0 +1,25 @@
+<div class="container">
+<% @articles.each do |article| %>
+
+
+    <div class="row">
+      Title: <%= article.title %>
+	</div>
+	<div class="row">
+      <%= link_to 'Show', article_path(article), class: 'btn btn-info btn-xs' %> 
+      <%= link_to edit_article_path(article), class: 'btn btn-warning btn-xs' do %>
+	    <i class="glyphicon glyphicon-edit"></i> Edit
+	  <% end %>
+	  <%= link_to  article_path(article), class: 'btn btn-danger btn-xs',
+           method: :delete,
+           data: { confirm: 'Are you sure?' } do %>
+	    <i class="glyphicon glyphicon-remove"></i> Remove   
+	  <% end %> 
+    </div>
+<hr>
+<% end %>
+<br>
+<%= link_to 'articles/new', class: 'btn btn-warning' do %>
+  <i class="glyphicon glyphicon-plus"></i> Add
+<% end %>
+</div>
