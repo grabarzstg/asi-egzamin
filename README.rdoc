@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projekt zaliczeniowy z architektury serwisów internetowych - 2015
 
-Things you may want to cover:
+* Ruby version - 2.1.6p336 (Windows)
 
-* Ruby version
+* Rails version - 4.2.1
 
-* System dependencies
+* Adres: <tt>http://salty-ridge-2936.herokuapp.com/</tt>
 
-* Configuration
+* Dane logowania dla przykadowego konta: <tt>e-mail: example@example.com</tt> <tt>haslo: 134567890</tt>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
