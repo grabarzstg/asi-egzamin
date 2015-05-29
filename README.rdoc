@@ -10,5 +10,6 @@ Projekt zaliczeniowy z architektury serwisów internetowych - 2015
 * Adres: <tt>http://salty-ridge-2936.herokuapp.com</tt>
 
 * Dane logowania dla przykadowego konta: 
-   e-mail: example@example.com</tt> <tt>haslo: 134567890
+   e-mail: example@example.com 
+   haslo: 134567890
 
