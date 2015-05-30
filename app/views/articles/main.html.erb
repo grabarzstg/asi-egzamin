@@ -3,7 +3,8 @@
 	<div class="media-body">
 	<h4 class="media-heading">
 	<%= link_to article.title, '/articles/' + article.id.to_s %>
-	  <p><small> <span class="glyphicon glyphicon-time"> </span> Dodano:  <%= article.created_at %> </small></p>
+	  <p><small> <span class="glyphicon glyphicon-time"> </span> Dodano:  <%= article.created_at %> </small></br>
+	  <small> Autor: <%= article.created_by %> </small> </p>
 	</h4>
 	  <div class="well">
         <%= article.text[0..550] %>

@@ -31,10 +31,10 @@ class CommentsController < ApplicationController
       if @comment.save
 	    flash[:success] = 'Comment was successfully created.'
         format.html { redirect_to @article }
-        format.json { render :show, status: :created, location: @comment }
+        #format.json { render :show, status: :created, location: @comment }
       else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        flash[:danger] = 'Comment cannot be blank.'
+        format.html { redirect_to @article }
       end
     end
   end
@@ -48,7 +48,7 @@ class CommentsController < ApplicationController
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,10 +56,11 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+	@article = Article.find(comment_params[:article_id])
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
-      format.json { head :no_content }
+	  	flash[:success] = 'Comment was successfully removed.'
+        format.html { redirect_to @article }
     end
   end
 

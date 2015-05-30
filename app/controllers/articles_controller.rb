@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_filter :authorize, :except => [:main]
- 
+  
   def new
     @article = Article.new
   end
@@ -58,6 +58,6 @@ class ArticlesController < ApplicationController
   
   private
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :created_by)
   end
 end

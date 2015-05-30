@@ -22,13 +22,15 @@
 </div>
 
 <div class="container">
-  <h3>Comments</h3>
+  <% if @comments.length > 0 %>
+    <h4>Komentarze:</h4>
+  <% end %>
   <% @comments.each do |comment| %>
     <div>
-      <strong><%= comment.user_name %></strong>
+      <strong><%= comment.user_name %> </strong> pisze: </br>
+	  <%= comment.created_at %>
       <br />
       <p><%= comment.body %></p>
-      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </div>
   <% end %>
   <%= render 'comments/form' %>
