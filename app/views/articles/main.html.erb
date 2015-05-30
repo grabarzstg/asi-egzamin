@@ -2,11 +2,15 @@
 <% @articles.each do |article| %>
 	<div class="media-body">
 	<h4 class="media-heading">
-      <%= article.title %> </br>
+	<%= link_to article.title, '/articles/' + article.id.to_s %>
 	  <p><small> <span class="glyphicon glyphicon-time"> </span> Dodano:  <%= article.created_at %> </small></p>
 	</h4>
 	  <div class="well">
-        <%= article.text %>
+        <%= article.text[0..550] %>
+		<% if article.text.length > 550 %>
+		  ...
+		  <%= link_to "Czytaj dalej", '/articles/' + article.id.to_s %>
+		<% end %>
 	  </div>
 	</div>
 <hr>

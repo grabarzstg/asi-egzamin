@@ -30,6 +30,8 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+	@comments = @article.comments.all
+    @comment = @article.comments.build
   end
   
   def update
@@ -58,6 +60,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :text)
   end
-  
-  
 end
