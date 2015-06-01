@@ -1,0 +1,27 @@
+<% if !flash[:notice].blank? %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
+<% end %>
+<br />
+<%= link_to "Dodaj obrazek", new_resume_path, class: "btn btn-primary" %>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Zdjecie</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.name %></td>
+        <td><%= image_tag(resume.attachment_url, :alt => "rss feed") %></td>
+        <td><%= button_to "Usun",  resume, method: :delete, class: "btn btn-danger", confirm: "Czy jestes pewnien ze chcesz usunac #{resume.name}?" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

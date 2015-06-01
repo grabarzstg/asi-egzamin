@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
   resources :comments
+  resources :articles
   #get 'sessions/new'
 
-  resources :articles
+  
   
   #get 'articles/main' => 'articles#main'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -17,8 +18,15 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   
 
-	get '/signup' => 'users#new'
-    post '/users' => 'users#create'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+  
+  resources :resumes, only: [:index, :new, :create, :destroy, :galeria]
+  get 'resumes/index' => 'resumes#index'
+  get 'resumes/new' => 'resumes#new'
+  get 'resumes/create' => 'resumes#create'
+  get 'resumes/destroy' => 'resumes#destroy'
+  get '/galeria' => 'resumes#galeria'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

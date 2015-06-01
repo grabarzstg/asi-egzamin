@@ -1,0 +1,29 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.1.1/isotope.pkgd.min.js"></script>
+<style type="text/css">
+	.img:hover 
+	{ -moz-box-shadow: 0 0 10px #ccc; 
+	-webkit-box-shadow: 0 0 10px #ccc; 
+	box-shadow: 0 0 10px #ccc; } 
+</style> 
+<% if !flash[:notice].blank? %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
+<% end %>
+<% provide(:title, 'Galeria') %>
+<p>
+<h1> Galeria zdjec </h1>
+
+</br></br>
+<div class="grid grid-pad">
+  <% @resumes.each do |resume| %>
+        <%= image_tag(resume.attachment_url, size: "180x180", :alt => "rss feed") %>
+  <% end %>
+</div>
+
+
+<h2><%= link_to 'Dodaj wiecej obrazkow', '/resumes/index' %></h2>
+</p>
+
+
+	
