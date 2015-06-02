@@ -7,9 +7,18 @@ Projekt zaliczeniowy z architektury serwisów internetowych - 2015
 
 * Rails version - 4.2.1
 
-* Adres: <tt>http://salty-ridge-2936.herokuapp.com</tt>
+* Adres: <tt>http://tkl.herokuapp.com/</tt>
 
 * Dane logowania dla przykadowego konta: 
    e-mail: example@example.com 
    haslo: 134567890
+   
+*Sklad zespolu:
+   -Marek Grabowski
+   -Dawid Student
+   -Boguslaw Czlapinski
+   
+*Zastosowane rozwiazanie:
+   -Bootstrap 
+   -Sass
 
