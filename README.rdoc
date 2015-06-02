@@ -9,16 +9,16 @@ Projekt zaliczeniowy z architektury serwisów internetowych - 2015
 
 * Adres: <tt>http://tkl.herokuapp.com/</tt>
 
-* Dane logowania dla przykadowego konta: 
+* Dane logowania dla przykladowego konta: 
    e-mail: example@example.com 
    haslo: 134567890
    
-*Sklad zespolu:
+* Sklad zespolu:
    -Marek Grabowski
    -Dawid Student
    -Boguslaw Czlapinski
    
-*Zastosowane rozwiazanie:
+* Zastosowane rozwiazanie:
    -Bootstrap 
    -Sass
 
